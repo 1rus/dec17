@@ -8,6 +8,7 @@ if 2 == 2:
 
 # some comments here
 # another comment here
+# next comment line 
 
 c = Config()
 cf = c.prepare()
