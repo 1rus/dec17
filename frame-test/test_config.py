@@ -6,6 +6,7 @@ from assertions import Assertions
 if 2 == 2:
     a = InvalidLocatorString('invalid locator string')
 
+#some comments here
 
 c = Config()
 cf = c.prepare()
