@@ -1,0 +1,8 @@
+# git ignore for dec17 repo
+/.cache/**
+/.idea/**
+/__pycache__/**
+/output/**
+lastafiled.*
+*.pyc
+# end of git ignore for dec17
