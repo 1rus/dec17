@@ -3,6 +3,6 @@
 /.idea/**
 /__pycache__/**
 /output/**
-lastafiled.*
+lastfiled.*
 *.pyc
 # end of git ignore for dec17
