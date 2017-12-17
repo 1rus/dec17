@@ -1,4 +1,7 @@
 node('docker'){
+    stage('cleanup'){
+        step([$class:'WsCleanup'])
+    }
     stage('checkout scm'){
         checkout scm
     }
