@@ -1,0 +1,17 @@
+node{
+    stage('checkout scm'){
+        checkout scm
+    }
+    def pythonImage
+    stage('build docker image'){
+        pythonImage = docker.build('dec17:build')
+    }
+    stage('test'){
+        pythonImage.inside {
+            sh '. /tmp/venv/activate && python - m pytest scripts --junitxml=build/results.xml'
+        }
+    }
+    stage('collect test results'){
+        junit 'build/results.xml'
+    }
+}
