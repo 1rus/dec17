@@ -1,6 +1,6 @@
 FROM python:3.6
 
-WORKDIR tmp\dec17
+WORKDIR /tmp/dec17
 
 COPY requirements.txt requirements.txt
 
