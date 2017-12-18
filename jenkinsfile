@@ -10,10 +10,12 @@ pipeline {
         }
         stage('test'){
             steps{
-if (isUnix()) {
-         sh ". /tmp/venv/bin/activate && python -m pytest --junitxml=build/results.xml"
-      } else {
-         bat (/"tmp\venv\scripts\activate" && "python -m pytest --junitxm=build\results.xml"/)            }
-        }
+                    if (isUnix()) {
+                            sh ". /tmp/venv/bin/activate && python -m pytest --junitxml=build/results.xml"
+                        } else {
+                            bat (/"tmp\venv\scripts\activate" && "python -m pytest --junitxm=build\results.xml"/)
+                            }
+                        }
+                    }
     }
 }
