@@ -1,21 +1,22 @@
-pipeline {
-    agent {
-        dockerfile true
+node {
+    stage('Cleanup'){
+        step([$class:"WsCleanup"])
     }
-    stages {
-        stage('checkout scm') {
-            steps {
-                git url:'https://bitbucket.org/rus_bucket/dec17.git', branch:'dev1'
-            }
+    stage('checkout scm') {
+        checkout scm
+    }
+    def pythonImage
+    def imageName="python/360:build"
+    stage('build docker image'){
+        bat "docker build -t ${imageName}  ."
+        pythonImage = docker.image(imageName)
+    }
+    stage('test'){
+        pythonImage.inside{
+            bat "tmp\\dtest\\venv\\scripts\\activate.bat && python -m pytest --junitxml=testreport/results.xml"
         }
-        stage('test'){
-            steps{
-                    if (isUnix()) {
-                            sh ". /tmp/venv/bin/activate && python -m pytest --junitxml=build/results.xml"
-                        } else {
-                            bat (/"tmp\venv\scripts\activate" && "python -m pytest --junitxm=build\results.xml"/)
-                            }
-                        }
-                    }
+    }
+    stage('collect test results'){
+        junit "testreport/results.xml"
     }
 }
