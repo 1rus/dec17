@@ -3,8 +3,8 @@
 timeout: 30
 
 executor:
-    host: localhost
-    port: 4444
+    host: 10.0.75.1
+    port: 5555
     is grid: false
 
 proxy:

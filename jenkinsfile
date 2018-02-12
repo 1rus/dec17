@@ -13,7 +13,7 @@ node {
     }
     stage('test'){
         pythonImage.inside{
-            bat "tmp\\dtest\\venv\\scripts\\activate.bat && python -m pytest --junitxml=testreport/results.xml"
+            bat "tmp\\dtest\\venv\\scripts\\activate.bat && python3 -m pytest --junitxml=testreport/results.xml"
         }
     }
     stage('collect test results'){

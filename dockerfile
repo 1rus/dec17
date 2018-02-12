@@ -10,6 +10,6 @@ WORKDIR /tmp/dtest
 
 COPY requirements.txt requirements.txt
 
-RUN python -m venv /tmp/dtest/venv && \
+RUN python3 -m venv /tmp/dtest/venv && \
     . /tmp/dtest/venv/scripts/activate && \
     pip install -r requirements.txt
