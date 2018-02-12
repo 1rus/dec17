@@ -1,9 +1,7 @@
 node ('docker') {
-
-     cleanWS()
-    
+    cleanWs()
     stage('checkout scm') {
-        checkout scm
+	checkout scm
     }
     def pythonImage
     def imageName="python/360:build"
