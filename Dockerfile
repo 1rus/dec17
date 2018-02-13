@@ -8,6 +8,6 @@ WORKDIR /tmp/app
 
 COPY requirements.txt requirements.txt
 
-RUN virtualenv --python=python3 /tmp/venv && \
+RUN python3 -m venv /tmp/venv && \
     . /tmp/venv/bin/activate && \
     pip install -r requirements.txt
