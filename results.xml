@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="0" name="pytest" skips="0" tests="3" time="0.033"><testcase classname="frame-test.test_assertions" file="frame-test\test_assertions.py" line="4" name="test_assert_equal" time="0.0"><system-out>None
-</system-out></testcase><testcase classname="frame-test.test_assertions" file="frame-test\test_assertions.py" line="10" name="test_verify_equal" time="0.0"><system-out>None
-</system-out></testcase><testcase classname="frame-test.test_assertions" file="frame-test\test_assertions.py" line="15" name="test_assert_not_equal" time="0.0"><system-out>None
-</system-out></testcase></testsuite>

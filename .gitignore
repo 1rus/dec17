@@ -10,6 +10,7 @@ output/
 
 *.py[cod]
 *.eggs
+*.xml
 
 build/
 venv/
