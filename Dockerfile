@@ -1,6 +1,4 @@
-ARG PYTHON_VERSION=3.6
-
-FROM python:${PYTHON_VERSION}
+FROM python:3.6
 
 LABEL maintainer "rusnichkin@gmail.com"
 
