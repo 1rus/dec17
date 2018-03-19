@@ -26,7 +26,7 @@ RUN mkdir -p /opt/selenium \
     && cd /opt/selenium; unzip /opt/selenium/chromedriver_linux64.zip; rm -rf chromedriver_linux64.zip; ln -fs /opt/selenium/chromedriver /usr/local/bin/chromedriver;
  
 # Firefox browser to run the tests
-RUN apt-get install -fy firefox
+RUN apt-get -f update && apt-get install -y firefox
  
 # Gecko Driver
 ENV GECKODRIVER_VERSION 0.16.0
