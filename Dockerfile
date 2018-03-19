@@ -40,6 +40,11 @@ RUN wget --no-verbose -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geck
   && ln -fs /opt/geckodriver-$GECKODRIVER_VERSION /usr/bin/wires
  
 # python
+RUN apt-get update && apt-get install -y \
+    python \
+    python-setuptools \
+    python-pip
+    
 WORKDIR /tmp/app
 
 COPY requirements.txt requirements.txt
