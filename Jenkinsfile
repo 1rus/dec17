@@ -1,4 +1,4 @@
-node ('master') {
+node ('docker') {
     cleanWs()
     stage('checkout scm'){
         checkout scm
@@ -9,9 +9,7 @@ node ('master') {
     }
     stage('test'){
         pythonImage.inside {
-		sh 'ls -la'
     		sh '''python3 -m pytest frame-test/test_assertions.py --junitxml=results.xml'''
-		sh 'ls -la'
         }
     }
     stage('collect test results'){
