@@ -9,7 +9,7 @@ node ('master') {
     }
     stage('test'){
         pythonImage.inside {
-    	sh '''. /tmp/venv/bin/activate && python -m pytest frame-test/test_assertions.py --junitxml=results.xml'''
+    	sh '''. /tmp/venv/bin/activate && python -m pytest frame-test --junitxml=results.xml'''
         }
     }
     stage('collect test results'){
