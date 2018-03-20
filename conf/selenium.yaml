@@ -3,9 +3,9 @@
 timeout: 30
 
 executor:
-    host: 10.0.75.1
+    host: 10.0.0.3
     port: 5555
-    is grid: false
+    is grid: true
 
 proxy:
     url:
