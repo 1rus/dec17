@@ -3,3 +3,6 @@ numpy==1.12.0
 
 # pytest
 pytest==3.2.3
+
+# selenium
+selenium==3.4.1
