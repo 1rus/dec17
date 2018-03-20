@@ -45,7 +45,8 @@ RUN apt-get update && apt-get install -y \
     python3-setuptools \
     python3-pip \
     python3-venv
-#RUN alias python=python3
+    
+RUN alias python=python3
 
 WORKDIR /tmp/app
 
