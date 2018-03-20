@@ -9,7 +9,7 @@ node {
     }
     stage('test'){
         pythonImage.inside {
-    		sh '''python3 -m pytest frame-test/test_assertions.py --junitxml=results.xml'''
+    		sh '''python3 -m pytest scripts --junitxml=results.xml'''
         }
     }
     stage('collect test results'){
