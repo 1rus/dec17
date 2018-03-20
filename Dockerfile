@@ -41,13 +41,14 @@ RUN wget --no-verbose -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geck
  
 # python
 RUN apt-get update && apt-get install -y \
-    python \
-    python-setuptools \
-    python-pip
-    
+    python3 \
+    python3-setuptools \
+    python3-pip
+#RUN alias python=python3
+
 WORKDIR /tmp/app
 
 COPY requirements.txt requirements.txt
 
-RUN python -m venv /tmp/venv && \
-    pip install -r requirements.txt
+RUN python3 -m venv /tmp/venv && \
+    pip3 install -r requirements.txt
