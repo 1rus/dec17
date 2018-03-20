@@ -1,4 +1,4 @@
-node (label 'docker') {
+node {
     cleanWs()
     stage('checkout scm'){
         checkout scm
