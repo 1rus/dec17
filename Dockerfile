@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM python:3.6-alpine3.7
 
 LABEL maintainer "rusnichkin@gmail.com"
  
@@ -40,10 +40,10 @@ RUN wget --no-verbose -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geck
   && ln -fs /opt/geckodriver-$GECKODRIVER_VERSION /usr/bin/wires
  
 # python
-RUN apt-get update && apt-get install -y \
-    python \
-    python-setuptools \
-    python-pip
+#RUN apt-get update && apt-get install -y \
+#    python \
+#    python-setuptools \
+#    python-pip
     
 WORKDIR /tmp/app
 
