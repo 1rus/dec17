@@ -9,3 +9,6 @@ selenium==3.4.1
 
 # pyYAML
 pyyaml==3.12
+
+# browsermob-proxy
+browsermob-proxy==0.8.0
