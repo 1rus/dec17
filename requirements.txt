@@ -6,3 +6,6 @@ pytest==3.2.3
 
 # selenium
 selenium==3.4.1
+
+# pyYAML
+pyyaml==3.12
